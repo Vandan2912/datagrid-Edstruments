@@ -1,0 +1,8 @@
+.placeholder {
+  display: block;
+  padding: 8px 4px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: var(--text3);
+  font-style: italic;
+}

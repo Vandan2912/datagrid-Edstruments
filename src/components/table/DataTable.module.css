@@ -1,0 +1,107 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Count bar */
+.countBar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text3);
+  flex-shrink: 0;
+}
+
+.countSep { color: var(--border2); }
+.countItem { display: flex; gap: 4px; }
+.countValue { color: var(--text2); }
+.countFiltered { color: var(--cyan); font-weight: 600; }
+.countOut { color: var(--amber); }
+
+/* Table scroll */
+.tableWrapper {
+  overflow: auto;
+  flex: 1;
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.th {
+  padding: 10px 14px;
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text3);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg3);
+  white-space: nowrap;
+  user-select: none;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.sortable {
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.sortable:hover {
+  color: var(--text2);
+}
+
+.sorted {
+  color: var(--cyan) !important;
+}
+
+.sortIcon {
+  color: var(--cyan);
+  font-size: 10px;
+}
+
+.sortIconInactive {
+  color: var(--border2);
+  font-size: 10px;
+}
+
+/* Rows */
+.rowEven td { background: transparent; }
+.rowOdd td { background: rgba(7, 13, 26, 0.4); }
+
+.table tbody tr:hover td {
+  background: rgba(0, 212, 255, 0.03) !important;
+}
+
+.td {
+  padding: 9px 14px;
+  font-size: 12px;
+  color: var(--text2);
+  border-bottom: 1px solid rgba(21, 32, 53, 0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 0;
+  transition: background 0.1s;
+}
+
+.empty {
+  padding: 56px;
+  text-align: center;
+  color: var(--text3);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}

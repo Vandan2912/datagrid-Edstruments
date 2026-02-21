@@ -1,0 +1,117 @@
+/* Shared input styles for all filter input components */
+
+.input,
+.select {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border2);
+  border-radius: 6px;
+  color: var(--text);
+  padding: 7px 10px;
+  font-size: 12px;
+  font-family: var(--font-mono);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  box-sizing: border-box;
+}
+
+.input:focus,
+.select:focus {
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.1);
+}
+
+.select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%233d5a7a'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 28px;
+}
+
+/* Range */
+.rangeGroup {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rangeGroup .input {
+  flex: 1;
+  min-width: 0;
+}
+
+.rangeSep {
+  color: var(--text3);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+/* Multi-select chips */
+.chipGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 6px;
+  background: var(--bg);
+  border: 1px solid var(--border2);
+  border-radius: 6px;
+  min-height: 36px;
+  max-height: 80px;
+  overflow-y: auto;
+}
+
+.chip {
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--border2);
+  background: transparent;
+  color: var(--text3);
+  cursor: pointer;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  transition: all 0.12s;
+  white-space: nowrap;
+}
+
+.chip:hover {
+  border-color: var(--text3);
+  color: var(--text2);
+}
+
+.chipActive {
+  border-color: var(--cyan) !important;
+  color: var(--cyan) !important;
+  background: rgba(0, 212, 255, 0.08) !important;
+}
+
+/* Boolean toggle */
+.toggleGroup {
+  display: flex;
+  gap: 6px;
+}
+
+.toggleBtn {
+  padding: 6px 16px;
+  border-radius: 5px;
+  border: 1px solid var(--border2);
+  background: transparent;
+  color: var(--text3);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.12s;
+}
+
+.toggleBtn:hover {
+  border-color: var(--text3);
+  color: var(--text2);
+}
+
+.toggleActive {
+  border-color: var(--cyan) !important;
+  color: var(--cyan) !important;
+  background: rgba(0, 212, 255, 0.08) !important;
+}

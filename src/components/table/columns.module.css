@@ -1,0 +1,50 @@
+.name {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.active {
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.inactive {
+  color: var(--red);
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.rating {
+  color: var(--amber);
+  font-family: var(--font-mono);
+}
+
+.dept {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+}
+
+.skills {
+  font-size: 11px;
+  color: var(--text2);
+  font-family: var(--font-mono);
+}
+
+.skillsExtra {
+  color: var(--cyan);
+  font-size: 10px;
+}
+
+.none {
+  color: var(--text3);
+}
