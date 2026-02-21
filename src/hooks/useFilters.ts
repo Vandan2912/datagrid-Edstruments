@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import type { FilterCondition, FilterValue } from "@/types/filter.types";
+import type { FilterCondition, FilterValue, Operator } from "@/types/filter.types";
 import { getDefaultOperator } from "@/config/operatorMappings";
 import { FIELD_DEFINITIONS } from "@/config/fieldDefinitions";
 
@@ -57,7 +57,9 @@ export function useFilters() {
         else if (operator === "between") defaultValue = {};
       }
 
-      setConditions((prev) => prev.map((c) => (c.id === id ? { ...c, operator, value: defaultValue } : c)));
+      setConditions((prev) =>
+        prev.map((c) => (c.id === id ? { ...c, operator: operator as Operator, value: defaultValue } : c)),
+      );
     },
     [conditions],
   );
